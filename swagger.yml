@@ -1,0 +1,55 @@
+swagger: "2.0"
+info:
+  description: example of swagger documentation
+  version: "1.0.0-SNAPSHOT"
+  title: Swagger REST example
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+paths:
+  /people:
+    get:
+      operationId: "people.read"
+      tags:
+        - "People"
+      summary: "The people data structure supported by the server application"
+      description: "Read the list of people"
+      responses:
+        200:
+          description: "Successful read people list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                fname:
+                  type: "string"
+                lname:
+                  type: "string"
+                timestamps:
+                  type: "string"
+  /people/{fname}:
+    get:
+      operationId: "people.readFname"
+      parameters:
+        - name: fname
+          in: path
+          description: User ID
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "lo que sea"
+          schema:
+            type: "array"
+            items:
+              properties:
+                fname:
+                  type: "string"
+                lname:
+                  type: "string"
+                timestamps:
+                  type: "string"
