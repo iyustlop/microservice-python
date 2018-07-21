@@ -15,7 +15,7 @@ paths:
     get:
       operationId: "people.read"
       tags:
-        - "/people"
+        - "people"
       summary: "The people data structure supported by the server application"
       description: "Read the list of people"
       responses:
@@ -35,7 +35,7 @@ paths:
     get:
       operationId: "people.readFname"
       tags:
-        - "/people/{fname}"
+        - "person"
       summary: "The people data structure supported by the server application"
       parameters:
         - name: fname
