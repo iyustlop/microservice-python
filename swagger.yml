@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
-  description: example of swagger documentation
+  description: People REST Endpoint.
   version: "1.0.0-SNAPSHOT"
-  title: Swagger REST example
+  title: People REST Endpoint.
 consumes:
   - "application/json"
 produces:
@@ -15,7 +15,7 @@ paths:
     get:
       operationId: "people.read"
       tags:
-        - "People"
+        - "/people"
       summary: "The people data structure supported by the server application"
       description: "Read the list of people"
       responses:
@@ -34,6 +34,9 @@ paths:
   /people/{fname}:
     get:
       operationId: "people.readFname"
+      tags:
+        - "/people/{fname}"
+      summary: "The people data structure supported by the server application"
       parameters:
         - name: fname
           in: path
