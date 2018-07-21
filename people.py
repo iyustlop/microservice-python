@@ -1,7 +1,9 @@
 from datetime import datetime
 
+
 def get_timestamp():
-  return datetime.now().strftime(("%Y-%m-%d %H:%M:%S"))
+    return datetime.now().strftime(("%Y-%m-%d %H:%M:%S"))
+
 
 # Data to serve with our API
 PEOPLE = {
@@ -22,8 +24,10 @@ PEOPLE = {
     }
 }
 
+
 def read():
-  return [PEOPLE[key] for key in sorted(PEOPLE.keys())]
+    return [PEOPLE[key] for key in sorted(PEOPLE.keys())]
+
 
 def readFname(fname):
-  return [PEOPLE[fname]]
+    return [PEOPLE[fname]]
