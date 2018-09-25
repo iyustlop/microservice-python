@@ -29,5 +29,5 @@ def read():
     return [PEOPLE[key] for key in sorted(PEOPLE.keys())]
 
 
-def readFname(fname):
-    return [PEOPLE[fname]]
+def readFname(lname):
+    return [PEOPLE[lname]]

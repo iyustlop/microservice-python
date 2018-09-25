@@ -31,14 +31,14 @@ paths:
                   type: "string"
                 timestamps:
                   type: "string"
-  /people/{fname}:
+  /people/{lname}:
     get:
       operationId: "people.readFname"
       tags:
         - "person"
       summary: "The people data structure supported by the server application"
       parameters:
-        - name: fname
+        - name: lname
           in: path
           description: User ID
           required: true
